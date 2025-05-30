@@ -1,3 +1,7 @@
-export default function Page() {
-  return <p>Invoices Dashboard Page</p>;
+export default async function Page() {
+  console.log('Some delay...');
+  const data:any = await new Promise((resolve) => setTimeout(resolve, 3000));
+
+  console.log(data)
+  return <p>Invoices Dashboard Page: {data}</p>;
 }
